@@ -1,0 +1,54 @@
+<div id='newPromo'>
+    <h3>Create New Promo:</h3>
+    <h4>Enter Pass Key last to ensure the data isn't submitted incorrectly</h4>
+</div>
+<form method="post" action="http://127.0.0.1:1024/form_post" id="filesubmit">
+
+    <table class="table">
+
+        <tr>
+
+            <td><label for="pwd">Pass Key:</label>
+                <input type="password" id="pwd" name="pwd" placeholder="Pass Key" required></td>
+            <td><label for="filterType">How shall we filter?</label>
+                <select id="filterType" name="filterType">
+                    <option value="skus">Specific SKU's</option>
+                    <option value="brands">Brands</option>
+                    <option value="allSkus">All SKU's !! Dangerous Option !!</option>
+                </select>
+                <input type="checkbox" id="confirmAll" name="confirmAll">
+                <label for="confirmAll">Confirm All</label><br>
+            </td>
+            <td>
+                <label for="skus_to_change_price">SKUs/Brands to alter (optional). Leave blank for All SKUs.</label>
+                <textarea name="skus_to_change_price" cols="40" rows="5"></textarea>
+            </td>
+            <td><label for="priceGroups">Which price group?</label>
+                <select id="priceGroups" name="priceGroups">
+                    <option selected="selected"> ------ NA ------ </option>
+                    <option value="woolies">Woolies</option>
+                    <option value="westfield">Westfield</option>
+                    <option value="bbq">BBQ Galore</option>
+                    <option value="kogan">Kogan</option>
+                    <option value="catch">Catch</option>
+                </select>
+
+            </td>
+
+            <td>
+                <label for="percentage">Percentage off (%)</label>
+                <input type="o-percent-input" id="percentage" name="percentage" class="perClass" placeholder="0%"
+                    step="1" max="50" required></td>
+
+            <td> <label for="startDate">Start Date</label>
+                <input type="datetime-local" id="startDate" name="startDate" required></td>
+
+            <td><label for="endDate">End Date</label><input type="datetime-local" id="endDate" name='endDate'
+                     required> </td>
+
+            <td class="edit-buttons"><button class="submit" id="submitbtn">Submit</button>
+            </td>
+
+        </tr>
+    </table>
+</form>

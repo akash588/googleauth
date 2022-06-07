@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
+    </script>
+    
+
+    <meta charset=" utf-8">
+    <title>KG Group - Promo Machine</title>
+</head>
+
+<body>
+
+    <img src="/img/kgLOGO.png" class="logo-img" alt="" width="400">
+    <h1>KG Group - Promo Machine</h1>
+
+    <p>Enter Promos all or some SKUs. Data = SKUs (optional), Target Price Group, Percentage Discount, Start Date, End
+        Date</p>
+    <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    <form method="post" action="http://127.0.0.1:1024/updatePromos" id="updatePromo">
+        <td class="edit-buttons"><button class="updatePromo" id="updatePromobtn">Manual Promo Update</button>
+    </form>
+
+    {{{ body }}}
+    {{#if listExists}}
+    <ul>
+        {{#each errors}}
+        <li class={{this.field}}>{{this.error}}</li>
+        {{/each}}
+    </ul>
+    {{/if}}
+
+
+    <form method="post" action="http://127.0.0.1:1024/see_active" id="see_active">
+        <td class="edit-buttons"><button class="promobtn" id="seePromosbtn">See/Refresh Active Promos</button>
+    </form>
+    <form method="post" action="http://127.0.0.1:1024/go_home" id="home">
+        <td class="edit-buttons"><button class="homeBtn" id="homebtn">Home/New Promo</button>
+    </form>
+
+
+</body>
+
+
+</html>
