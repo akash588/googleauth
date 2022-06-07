@@ -29,11 +29,11 @@ module.exports = function (passport) {
           //find the user in our database 
           let user = await User.findOne({ googleId: profile.id })
           // code to check if it belongs to kggroup
-          if(!(profile.emails.find(item => item.value.indexOf("kgelectronic") > -1) || profile.emails.find(item => item.value.indexOf("kggroup") > -1))) {
+//           if(!(profile.emails.find(item => item.value.indexOf("kgelectronic") > -1) || profile.emails.find(item => item.value.indexOf("kggroup") > -1))) {
            
             
-            throw new Error("not allowed");
-          }
+//             throw new Error("not allowed");
+//           }
 
           if (user) {
             //If user present in our database.
